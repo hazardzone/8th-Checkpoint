@@ -1,0 +1,25 @@
+ALGORITHM word_counter
+VAR
+    word_counter : INTEGER = 1;
+    vowels_counter : INTEGER = 0;
+    vowels: ARRAY_OF CHAR["a","e","i","o","u","A","E","I","O","U"];
+BEGIN
+    // Counts each character in the sentence 
+    FOR ( var i : INTEGER = 0; i < sentence.length(); i++)  DO
+        char_counter = char_counter + 1;
+    END_FOR
+    
+    //Count the umber of words in the sentence 
+    FOR ( var i : INTEGER = 0; i < sentence.length(); i++) DO
+        IF (sentence[i] = " ") THEN
+            word_counter = word_counter + 1 
+        END_IF
+    END_FOR
+
+    //Counts the number of vowels in the sentence
+    FOR ( var i : INTEGER = 0; i < sentence.length(); i++) DO 
+        IF ( sentence[i]) THEN
+            vowels_counter = vowels_counter + 1
+        END_IF
+    END_FOR
+END
